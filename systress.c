@@ -49,14 +49,14 @@ main (int argc, char **argv)
   char *syscall = NULL, *arg = NULL;
   int c;
 
-  while ((c = getopt (argc, argv, "s:c:a:")) != -1)
+  while ((c = getopt (argc, argv, "s:d:a:")) != -1)
     switch (c)
       {
       case 's':
 	syscall = strdup (optarg);
 	break;
-      case 'c':
-	count = atoi (optarg) / RATE;
+      case 'd':
+	duration = atoi (optarg) / RATE;
 	break;
       case 'a':
 	arg = strdup (optarg);
